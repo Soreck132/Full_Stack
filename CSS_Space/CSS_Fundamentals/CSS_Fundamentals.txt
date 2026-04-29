@@ -1,0 +1,147 @@
+
+######### 1.- CSS Basics ##########
+
+1.1 What is CSS?
+    CSS stands for cascading style sheets. 
+
+1.2 What are default browser styles?
+    Before users were allowed to control HTML pages through cascading style sheets, browsers had to have some way of displaying HTML content visually. These were called default browser styles or user agent styles.
+
+    
+
+1.3 What is the basic CSS lexicon?
+    The most basic description of the syntax is that it includes a selector and a declaration block. The selector points to the element that you want to style. And the declaration block, which is enclosed in curly braces and can contain one or more declarations. These declarations are simply the formatting instructions.
+
+1.4 What are the basic selector types?
+    CSS selectors are what we use to find or target particular bits of HTML. 
+
+        Type selector (element selector)
+            Type selectors are global in nature, meaning they're going to affect every element of that type in a document. You just need to know what the tag is for a given HTML element in order to style it.
+
+            p {
+                font-size: 20px;
+            }
+
+        Class selector
+           Class selector. These match elements based on the contents of their class attribute.
+
+            <p class = "error"> Text </p>
+
+            .error {
+            color: red;
+            }
+
+        ID selector
+            ID selectors. Unlike classes, IDs can only be used once on a page. In this example, the browser would find the element on a page with an ID attribute set to content, and then it would apply the styling specified by that ID selector. IDs are identified by the pound symbol in front of the ID name.
+
+            <p id= "content"> Text </p>
+
+            #content {
+            color: red;
+            }
+
+        Descendant selector
+            The descendant selector matches all elements that are descendants of a specified element. 
+
+            div p {
+                color: orange;
+            }
+            <div>
+                <p> lorem ipsum </p>
+                <p> lorem ipsum </p>
+            </div>
+
+1.5 What are CSS combinators?
+    A Combinator is something we can use to explain the relationship between selectors. 
+    
+    Descendant selector
+       descendant selector, and this says that any span inside of a div matches. It doesn't matter if it's directly after the div or nested a few levels deep, all the spans inside of this div are targeted.
+
+        div span { }
+
+    Child Selector
+        by adding the greater than sign between our div and our span. In this case, only span elements that are a direct child of the div are selected.
+
+        div > span { }    
+
+    Adjacent sibling selector
+        The adjacent sibling selector uses a plus sign to separate two selectors and adjacent means immediately following. So this selector means that we get a match, only if we find a span after we've closed our div.
+
+        div + span { }       
+
+     General sibling selector
+        The adjacent sibling selector uses a plus sign to separate two selectors and adjacent means immediately following. So this selector means that we get a match, only if we find a span after we've closed our div.
+
+        div ~ span { }       
+     
+1.6 How does CSS works with HTML?
+
+    --Use meaningful class and ID names.
+
+    --Use a consistent HTML structure.
+
+    --structure first design second.
+
+1.7 What options are available to write your styles?
+
+    --External styles
+
+    --Embedded styles
+
+    --Inline Styles 
+
+1.8 How do browsers render styles?
+    When a browser displays a document, it's combining the document's content with its style information. This process happens in stages.
+
+
+    ######### 2.- CSS Concepts ##########
+
+2.1 Why CSS reset and normalize matter
+    The reset CSS approach is meant to completely wipe out the built-in styling for HTML elements.
+
+2.2 Working on fonts
+    Fonts Properties
+        font-family
+            {
+                font-family: "times new roman", times, serif;
+            }
+        font-weight
+            {
+                font-weight: bold; 
+            }
+        font-style
+            {
+                
+            }
+        font-size
+
+2.3 Understanding the box model
+
+2.4 Setting margins and padding
+
+2.5 Working with color
+
+2.6 Applaying borders and background
+
+2.7 Understanding the units of mesurements
+
+######### 3.- A closer look at the cascade ##########
+
+3.1 Understanding cascading order
+
+3.2 Calculating specificity
+
+3.3 Considering the rule !important
+
+######### 4.- Layouts ##########
+
+4.1 Structuring a page with CSS
+
+4.2 Understanding how flex box works
+
+4.3 Understanding how the CSS grid  works
+
+4.4 Understanding CSS frameworks
+
+4.5 Creating responsive layouts
+

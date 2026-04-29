@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Platform</title>
+
+    <style>
+        /* GENERAL */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+        }
+
+        /* HEADER */
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+        }
+
+        .progress-bar {
+            background: white;
+            width: 200px;
+            height: 8px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            background: #10b981;
+            height: 100%;
+            width: 40%;
+        }
+
+        /* MAIN LAYOUT */
+        .container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 260px;
+            background: white;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar li {
+            padding: 8px 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .sidebar li:hover {
+            background: #e8f0fe;
+        }
+
+        /* CONTENT AREA */
+        .content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .lesson-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            background: #000;
+            height: 350px;
+            margin-bottom: 25px;
+        }
+
+        .lesson-text {
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        /* BUTTONS */
+        .nav-buttons {
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        /* MOBILE */
+        @media(max-width:900px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Web Development Course</h1>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h3>Course Modules</h3>
+
+            <ul>
+                <li><strong>Module 1</strong></li>
+                <li>Introduction</li>
+                <li>HTML Basics</li>
+                <li>First Web Page</li>
+
+                <li style="margin-top:10px;"><strong>Module 2</strong></li>
+                <li>CSS Fundamentals</li>
+                <li>Layouts</li>
+                <li>Responsive Design</li>
+
+                <li style="margin-top:10px;"><strong>Module 3</strong></li>
+                <li>JavaScript Basics</li>
+                <li>DOM Manipulation</li>
+
+            </ul>
+
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <h2 class="lesson-title">Lesson: HTML Basics</h2>
+
+            <div class="video-container"></div>
+
+            <div class="lesson-text">
+
+                <p>
+                    HTML is the structure of every web page. It defines headings,
+                    paragraphs, images, links, and other elements.
+                </p>
+
+                <p>
+                    In this lesson you will learn how to create your first HTML document
+                    and understand the most important tags.
+                </p>
+
+                <pre>
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;My first web page&lt;/p&gt;
+</pre>
+
+            </div>
+
+            <div class="nav-buttons">
+                <button>Previous</button>
+                <button>Next Lesson</button>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

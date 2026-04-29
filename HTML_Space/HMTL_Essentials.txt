@@ -1,0 +1,336 @@
+
+######### 1.- The Web ##########
+
+1.1 Languages of the Web 
+    HTML, is one part of a group of languages that control what you see in a browser. This is known as front-end or client-side languages and includes HTML, CSS and JavaScript. HTML stands for Hyper Text Markup Language. It's used to format content and create clickable hyperlinks that lets you navigate between different pages on the internet. CSS is a style sheet language used to define the visual presentation, layout, and overall look of the HTML elements. JavaScript is a scripting language used to add interactivity to webpages. 
+
+1.2 Anatomy of a Website
+   A website is basically a collection of files and folders that contain the website's, content, code, style sheets, images, and more. All of these files need to be structured in a specific way so they can pull information from each other.
+
+   consistent naming conventions; Avoid spaces in file names, user all lower case letter, short and meaningful names.
+
+   There are 2 way to set up a website Single-Page and Multi-Page Website.
+
+1.3 The Rules of the Web
+    caniuse.com is great for checking browser support for specific HTML elements and CSS properties.
+
+    https://developer.mozilla.org/en-US/ shows the official specifications.
+
+1.4 Terminology and Syntax
+    When writing HTML, instead of selecting an icon or button, we create these different types of elements using HTML tags. Tags are written by enclosing the element name within left and right angle brackets. The opening tag marks the beginning of the element. The closing tag marks the end of an element and must include a forward slash directly before the tag name. The content to be displayed in the browser is added between the opening and closing tag. The complete structure is the HTML element.  
+    
+    HTML tags can also be written inside of other HTML tags. Most HTML tags are written in pairs, but there are some exceptions. These are called void elements, also referred to as self-closing. They do not require a closing tag. Instead of wrapping content, they are the content themselves, like the hr tag, which adds a divider line. Or they're used to embed web resources like image tags used for images. 
+
+     Attributes are used to add additional information or functionality to an HTML element. They're included in the opening tag after the tag name and separated by a space. They can be defined with or without a value. When used without values, they're called Boolean attributes. Multiple attributes can be added to an element in any order, but must be separated by a space. 
+
+
+######### 2.- Formating Text ##########        
+
+2.1 Paragraphs and Headings
+    Tag <p> </p> is use to create a Paragraph element
+    Tag <h1> </h1> is use to create Heading from h1 to h6 size
+
+2.2 Ordered, unordered and description list
+    Tag <li> </li> use to create a list
+    Tag <ol> </ol> use to create a order list like 1-4
+        <ol start=""> </ol> use to create from where to start list like 4-8
+        <ol type=""> </ol> use to create type of sequence like i-iv 
+    Tag <ul> </ul> use to create unordered list 
+    Tag <dl> </dl> use to create terms and descriptions follow by <dt> </dt> for terms and <dd> </dd> for descriptions
+
+2.3 Quotations
+    Tag <blockquote></blockquote> use to create quoatation follow by <p> </p>, sintax <blockquote><p> Text content</p></blockquote> 
+    Tag <cite></cite> uses to create cites 
+    Tag <q></q> use to create quotation marks
+
+        Attribute <blockquote cite="URL"> Text</blockquote> use to refer to quote source only will be visible on metadata.
+        
+2.4 Date and Time
+    Tag <time></time> use to give time to any time row.
+
+         Attribute <time datetime="2025-03-01 18:20">Mar 1, 2025, 6:20 p.m.</time> datetime is use to give any allow format to any given date, time or datetime.
+
+2.5 Bold and Italics
+    Tag <strong></strong> use to give importance to any given text
+    Tag <em></em> use to give emphasis to any given text
+    Tag <i></i> use to represents words different from normal prose
+    Tag <b></b> use to draw attention with no importance
+
+2.6 Character and entity reference
+    Reference link; https://www.toptal.com/designers/htmlarrows/ 
+        use above link to configure character reference like;
+
+            &lt;h1>heading&lt;/h1>
+
+2.7 Code and line breaks
+    element <code></code> use to warp text
+    element <pre></pre> will allow to use additional space or tabs to show indentation in the code.
+    element <br></br> use to add a line breaks between text
+
+2.8 HTML and Typo
+    element <sub></sub> use to give to text smaller pieces of a text 
+     element <small></small> Similar to Sub element
+
+######### 3.- The HTML Document and Page Structure ##########   
+
+3.1 The Basic HTML Document
+--Specific ELEMENTS that all documets must include:
+    <!DOCTYPE html> 
+        --is a declaration that tells the browser which version of HTML is being used
+          html
+    <html lang="en">
+         --The HTML element is the first HTML tag. It follows the doctype, making it the root element. All other HTML tags must be contained within. The lang attribute is also included to help screen reading technology determine the language of the page content.
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+        --the head tag, which is used for information about the document itself rather than the content. Nested inside is the title tag. This is used to define the title of the webpage. The title text appears in three places: the browser's toolbar, bookmarks, and search engine results. 
+
+        <title>Document</title>
+            --Each webpage can have a unique title. For example, your homepage may include your name and job title. For the other pages, you can add something specific about the content, like contact or courses. This can help people distinguish between the different pages when they view their browser tabs, bookmarks, or search results. Other types of information can be included using the meta tag. 
+
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            --Other types of information can be included using the meta tag. It's used with various attributes to provide different types of metadata. It's also avoid elements, so it doesn't require a closing tag. 
+                
+                Meta tags can be added anywhere within the head section. This example 
+    <body>
+            --
+3.2 Structuring content part 1
+    The basic layout of a Website consist on a:
+
+    header <header></header> 
+        main content <main></main>
+    footer at the bottom <footer></footer>
+
+        <div></div> div element should only be used when no other semantic element is appropriate. 
+
+3.3 Structuring content part 2
+    elements like below Can be use to divide the content into more specific grouping.
+
+        <section></section> 
+            --The <section> element is used to define a standalone block of related content. Each section should include a heading. 
+
+        <article></article>
+            --The <article> element represents content that is self-contained and independent from the surrounding content.Each <article> element should also include a heading. 
+
+        <aside></aside>
+            --The <aside> element is used for content that is separate but indirectly related to the main content. It's often used for things you might see on the side of a webpage like ads, or a author bio if you're on a blog, or highlighted sections from within the main content.
+
+3.4 HTML Tables
+     <table> table tag
+                    <caption>/caption> table description
+                    <tr> table row
+                        <th></th> table header
+                        <td></td> table data
+                    </tr>
+                 
+                </table>
+
+3.5 The Document Object Model DOM
+    Relationships between the elements known as the document object model, or DOM for short. The DOM is represented as a tree structure, and each node in the tree corresponds to a specific part of the document. The terminology used to describe these relationships is pretty much the same as the terms we use to describe relationships in a family tree. 
+
+######### 4.- Links and Navigation ##########   
+
+4.1 The Hiperlink
+    Hyperlinks allow users to move between different pages and resources on the Internet by clicking on links embedded in webpages and written in HTML.
+
+4.2 Relative and Absolute URL´s
+   Anchor tag <a href=""></a> 
+     Hyperlinks are created using the anchor element, represented by the <a> tag. The content added between the tags becomes clickable. An href attribute is also included to specify the link's destination. Links can point to project files or external websites using either relative or absolute URLs.
+
+     ---Ways to link files internally or the same directory--
+        #####RELATIVE URL#####
+        <a href="blog_example.html"> Blog example</a>
+        <a href="basic_table_structure.html"> Basic Table Structure</a>
+
+        or 
+
+        <a href="./blog_example.html"></a>
+        <a href="./basic_table_structure.html"></a>
+
+         #####ABSOLUTE URL#####
+                --Contain only the website attach it to any structured website from the outside.
+
+         <a href="https://www.google.com/"> GOOGLE</a>
+
+
+4.3 Types of Links
+   <!--Accesible Link Text-->    
+            <p>Learn more about
+                <a href="blog_example.html">block example</a>
+            </p>
+
+    <!--In-Page Linking Structure-->
+
+            <ul id="top">
+                <li><a href="#go1">Link 1</a></li>
+                <li><a href="#go2">link 2</a></li>
+                <li><a href="#go3">link 3</a></li>
+            </ul>
+
+            <section>
+                <p id="go1">Text 1</p>
+                <p id="go2">Text 2</p>
+                <p id="go3">Text 3</p>
+                <a href="#top">back to the top</a>
+            </section>
+
+    <!--Emails and Phone Numbers-->
+
+            <a href="mailto:hello@example.com">
+                Send email to hello@example.com
+            </a>
+
+            <a href="tel:4777060413">
+                call the phone number tel:4777060413
+            </a>
+
+<!--Hiperlinks Attributes-->
+
+--target attribute
+<a href="www.google " target="_blank">Google site</a>
+                    use it to target a website outside of the main page usin _blank
+
+--download attribute
+
+<a href="profile_index.html" download="profile_index.pdf">Profile example</a>
+                    use it to download a file using the especified termination like .pdf .txt depending on the file format
+
+--title attribute
+
+<a href="https://www.google.com/" title="This is a google link">Goole Main Site</a>
+                    use it to add addition information to the link added just informative
+
+
+4.4 Navigation
+    Tag element <nav></nav> 
+        The nav element represents navigation links. Like the header, this content usually stays consistent across webpages to help users navigate the website more easily. A main menu navigation is typically added in the header. The navigation can be placed before or after other header content, but positioning it first improves accessibility since users will be able to access the navigation options right away. It can also be included in the main section or article element, if you have a navigation that's relevant to the page content, A nav may also be included in the footer section for secondary navigation links, like policies or terms of service.
+
+        --IT NEEDS TO BE ADDED TO ALL <nav></nav>  RELATED PAGES
+
+
+######### 5.- Images ########## 
+
+5.1 Image Formats
+    Image formats used on the web. These formats fall into two categories, raster and vector images. Raster image files are made up of pixels, which are basically tiny squares. Each pixel has its own color, and together they form the image. The more pixels an image has, the higher its quality and detail. Digital photographs are usually raster files and are commonly used for editing photos and graphics. Vector images use mathematical equations to define lines, curves, and shapes instead of pixels. Because of this, they can be scaled up or down without losing quality. Vector files work best for digital illustrations, complex graphics, and logos, but they're not suitable for photographs. All web image formats will be discussing in this video are raster types, except SVG, which is a vector type. Digital image files are always square or rectangular in shape. 
+
+5.2 Embedding images
+    Tag element <img> 
+
+        The source attribute must be included to point to the location of the image file. A relative URL points to the files within your project directory. An absolute URL points to an external resource. The syntax for relative and absolute URLs work the same whether you're creating hyperlinks or embedding web resources.
+
+    --Sites to add hosted images
+            https://picsum.photos/
+            https://placehold.co/
+
+5.3 Width and height attributes
+    <img src="" width="" height="" alt=""> 
+        img element does not need to add closing tag
+        but to reisize the current image width and height must need added, if the width or the height is configured individually the other will be reisized automatically.
+
+5.4 Optimizing images
+
+    RESOLUTION;
+        number of pixels displayed on a screen
+                defined by the width and height 
+
+    PIXEL DENSITY;
+        Number of Pixels that fit into a screen, mesured in PPI (Pixel Per Inch)
+
+    --Tools to resize images
+            https://www.adobe.com/mx/products/photoshop.html
+            https://www.gimp.org/
+            https://pixlr.com/
+
+5.5 Developer Tools and resizing images
+    To reisize photos there are two flexible options on of them is 
+        --Devloper Tools from any browser
+        --https://pixlr.com/ can help to resize images but might need to download the same photo in different sizes.
+
+5.6 Responsive images, part 1
+    Attribute srcset= "" 
+       With srcset and a pixel density descriptor, we can use multiple files and allow the browser to display the most appropriate one for the user's screen. With this technique, the display dimensions remain the same across different screen sizes, but we can swap out the image file based on pixel density.
+
+5.7 Responsive images, part 2
+    Attribute sizes= "(max-width: 600px) 400px" 
+       Set conditions for images to be display, according to the size of the screen it helps to deal with 
+       scrrens dimensions.
+
+5.8 Responsive images with picture
+    Tag element <Picture></Picture>
+        Can be used for images files with different compositions, images are based on viewport width and pixel density.
+
+                <!--Element Components-->
+        <Picture>
+            <source media="(max-width: 600px)"
+                    srcset="image-small.png">
+            <source media="(min-width: 1000px)" 
+                    srcset="image-midium.png">
+            <img src="image-small.png" alt="description of image">        
+        </Picture>
+
+
+######### 6.- More media elements ########## 
+
+6.1 Video
+    Common Video Formats MP4, WebM, OGG.
+    Tag Element <video src=""></video>
+
+    --Video Attributes
+            controls; add controls to the video like volume and play/pause bottom
+            autoplay; add to set the video when the page loads
+            loop; automatically repeats the video when it ends
+            poster; add a preview image video
+            width and height; defines the video dimensions on the webpage
+
+6.2 Adding captions and subtitles
+    Tag Element  <track></track> 
+        Is used to add content such as captions, subtitles, and chapters. Track element must need to be nested into the video element to work properly and track element will require a .vtt file added to src="" attribute to work.
+
+6.3 Audio
+    Tag Element  <Audio></Audio> 
+        Works Similar to the video element but is case there is not video audio converts in a better choice.
+
+6.4 Embedding media with iframes
+    Tag Element <iframe src="" frameborder="0"></iframe>
+        Is use to add or link videos or resources from different websites, by looking to the Embed option on the resource you might want to associate.
+
+######### 7.- Web Forms ##########
+
+7.1 What are Web Forms
+    Web forms are one of the main ways users interact with websites. When you fill out a quiz, sign up for a newsletter, or enter payment details to make an online purchase, you are using forms to input your data. 
+
+7.2 HTML form basics
+    <form> → Wraps all form controls
+    action → Where the data is sent
+    method → get or post
+    <label> → Describes an input (important for accessibility)
+    <input> → Field for user data
+    name attribute → Required for data submission
+    button type="submit" → Sends the form
+
+7.3 Input Types
+     <input id="Password" name="Password">
+        Input elements are an important part of creating forms since they can handle different types of data. By adding the type attribute, we can specify each input's data type, which determines how the input functions.
+
+7.4 Form Validation
+    <input id="Password" name="Password" type="password" required placeholder="haslo bien please"
+            minlength="9">
+    Handles the requirements for the data added to the form if some of this information does not match the form will launch and error message.
+
+7.5 Checkbox and radio inputs
+
+    A radio button is used to present multiple options where users can select only one choice. Once a radio button is selected, it can only be deselected by choosing another radio button in the same group. It also requires a label.
+
+7.6 additional form elements
+
+######### 8.- Accessibility and Internationalization ##########
+
+8.1 What is Accessibility?
+    Accessibility means making websites usable by as many people as possible. While it mostly focuses on supporting people with disabilities, this practice benefits everyone.
+
+8.2 accessible Rich internet applications (ARIA)
+    it is a special set of attributes that can be added to HTML elements to provide additional semantics and improve accessibility. 
+

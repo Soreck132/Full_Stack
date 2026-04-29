@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account signup form</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+
+    <form action="submit.html" method="get">
+        <h2>Pon tus datos aqui!</h2>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="algo@algo.com"
+                pattern="nombre.nombre@tld.com">
+            </div>
+            <div>
+            <label for="Password">Password</label>
+            <input id="Password" name="Password" type="password" required placeholder="haslo bien please"
+            minlength="9">
+            </div>
+            <div>
+                <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                <label for="newsletter"> si si quiero</label>
+            </div>
+            <!-- multiple checkboxes -->
+            <fieldset>
+                <legend>Choose your topics</legend>
+                <div>
+                    <input type="checkbox" id="coding" name="topic" value="coding">
+                    <label for="coding">Coding</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tools" name="topic" value="tools">
+                    <label for="tools">Tools and software</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="productivity" name="topic" value="productivity">
+                    <label for="productivity">Productivity</label>
+                </div>
+            </fieldset>
+            
+            <!-- multiple radios -->
+            <fieldset>
+                <legend>Choose your frequency</legend>
+                <div>
+                    <input type="radio" id="weekly" name="frequency" value="weekly">
+                    <label for="weekly">Weekly</label>
+                </div>
+                <div>
+                    <input type="radio" id="monthly" name="frequency" value="monthly">
+                    <label for="monthly">Monthly</label>
+                </div>
+            </fieldset>
+            <label for="fruit">select a fruit:</label>
+            <select name="fruit" id="fruit">
+                <option>Apples</option>
+                <option>Grapes</option>
+                <option>pineapples</option>
+            </select>
+
+            <label for="message">leave a message</label>
+            <textarea name="message" id="message" cols="30" rows="5"></textarea>
+            <button>Creat Account</button>
+    </form>
+       
+</body>
+</html>
